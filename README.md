@@ -68,3 +68,103 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Admin Panel
+
+A modern admin panel built with React and Tailwind CSS, featuring RTL support and responsive design.
+
+## Page Structure
+
+When creating a new page in the application, follow this structure:
+
+1. First, import the required components:
+
+```jsx
+import Sidebar from "../../components/sidebar/sidebar";
+import Navbar from "../../components/navbar/navbar";
+```
+
+2. Add the Navbar and Sidebar components at the top of your page:
+
+```jsx
+<>
+  <Navbar />
+  <Sidebar />
+  {/* Your page content goes here */}
+</>
+```
+
+3. Wrap your page content with this container div to ensure proper layout and spacing:
+
+```jsx
+<div className="mr-0 lg:mr-64 p-4 lg:p-8 bg-gray-100 min-h-screen mt-16 lg:mt-10 transition-all duration-300">
+  {/* Your page content goes here */}
+</div>
+```
+
+This container div provides:
+
+- Proper margin for the sidebar (`mr-0 lg:mr-64`)
+- Consistent padding (`p-4 lg:p-8`)
+- Light gray background (`bg-gray-100`)
+- Full height (`min-h-screen`)
+- Top margin for the navbar (`mt-16 lg:mt-10`)
+- Smooth transitions (`transition-all duration-300`)
+
+## Example Page Structure
+
+Here's a complete example of a new page:
+
+```jsx
+import React from "react";
+import Sidebar from "../../components/sidebar/sidebar";
+import Navbar from "../../components/navbar/navbar";
+
+function NewPage() {
+  return (
+    <>
+      <Navbar />
+      <Sidebar />
+      <div className="mr-0 lg:mr-64 p-4 lg:p-8 bg-gray-100 min-h-screen mt-16 lg:mt-10 transition-all duration-300">
+        {/* Your page content goes here */}
+      </div>
+    </>
+  );
+}
+
+export default NewPage;
+```
+
+## Features
+
+- Responsive design
+- RTL support
+- Modern UI with Tailwind CSS
+- Consistent layout across all pages
+- Mobile-friendly navigation
+- Dark mode support (coming soon)
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+```
+
+## Contributing
+
+When adding new pages or features:
+
+1. Follow the page structure guidelines above
+2. Maintain RTL support
+3. Ensure responsive design
+4. Use Tailwind CSS for styling
+5. Follow the existing component patterns
