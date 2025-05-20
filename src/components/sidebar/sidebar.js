@@ -31,8 +31,8 @@ function Sidebar() {
       {/* Mobile Toggle Button */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 right-4 z-50 lg:hidden bg-white text-purple-600 p-2 rounded-full shadow-md border border-gray-200 hover:bg-gradient-to-l hover:from-purple-500 hover:via-pink-400 hover:to-blue-400 hover:text-white transition-all duration-200"
-        aria-label={isOpen ? "بستن منو" : "باز کردن منو"}
+        className="fixed top-4 right-4 z-50 lg:hidden bg-white text-purple-600 p-2 rounded-fullborder-gray-200 hover:bg-gradient-to-l hover:from-purple-500 hover:via-pink-400 hover:to-blue-400 hover:text-white transition-all duration-200"
+        aria-label={isOpen ? "close" : "open"}
       >
         {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
       </button>
